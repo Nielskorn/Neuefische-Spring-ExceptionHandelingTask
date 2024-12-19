@@ -17,7 +17,7 @@ class CarControllerTest {
 private MockMvc  mvc;
     @Test
     void getCarBrand()throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/car/porsche"))
+        mvc.perform(MockMvcRequestBuilders.get("/car/BMW"))
                 .andExpect(MockMvcResultMatchers.status().isInternalServerError())
                 .andExpect(MockMvcResultMatchers.content().string(containsString("Only 'porsche' allowed")));
     }
